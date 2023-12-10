@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>My Home Screen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="imgUpload">
+    <img src="upload.png">
+    <input type="file" id="uploadBtn" accept="image/*" style="display: none;" onchange="output(event)">
+    <label>Upload Image</label>
+  </div>
+  <div class="below">
+    <div class="inputHolder">
+    <label contenteditable="true" oninput="change()" id="changeText">Krishna is love ❤</label>
+    <input type="text" class="inputTag" placeholder="input Search text">
+    <img src="search.png" id="searchBtn">
+    </div>
+    <div class="social-container">
+      <a href="https://m.youtube.com"><div class="media">
+        <img src="/youtube.png" alt="Youtube">
+        <label>YouTube</label>
+      </div></a>
+      <a href="https://instagram.com"><div class="media">
+        <img src="/instagram.png" alt="Instagram" style="height: 17vw;">
+        <label>Instagram</label>
+      </div></a>
+      <a href="https://m.facebook.com"><div class="media">
+        <img src="/Facebook.png" alt="Facebook">
+        Facebook
+      </div></a>
+      <a href="https://flipkart.com"><div class="media">
+        <img src="/flipkart.png" alt="flipkart">
+        Flipkart
+      </div></a>
+    </div>
+  </div>
+  <script src="https://unpkg.com/cropperjs@next"></script>
+  <script src="main.js"></script>
+</body>
+</html>
