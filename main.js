@@ -5,6 +5,7 @@ const inputTag = document.querySelector(".inputTag")
 const searchBtn = document.getElementById("searchBtn")
 const search = ()=>{
   let url = 'https://www.google.com/search?q='+inputTag.value
+  inputTag.value = ""
   window.open(url)
 }
 if (localStorage.getItem("text") != null && localStorage.getItem("text") != undefined) {
