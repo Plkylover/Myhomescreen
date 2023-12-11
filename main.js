@@ -5,9 +5,15 @@ const inputTag = document.querySelector(".inputTag")
 const searchBtn = document.getElementById("searchBtn")
 const search = ()=>{
   let url = 'https://www.google.com/search?q='+inputTag.value
-  inputTag.value = ""
+  inputTag.value = ''
   window.open(url)
 }
+const change = ()=>{
+  localStorage.setItem("text", changeText.innerHTML)
+}
+imgUpload.addEventListener("click", ()=>{
+  uploadBtn.click()
+})
 if (localStorage.getItem("text") != null && localStorage.getItem("text") != undefined) {
   changeText.innerHTML = localStorage.getItem("text")
 }
@@ -20,12 +26,6 @@ if (localStorage.getItem("ImgSrc") != null && localStorage.getItem("ImgSrc") != 
   imgUpload.style.backgroundSize = 'cover'
   imgUpload.style.border = 'none'
 }
-const change = ()=>{
-  localStorage.setItem("text", changeText.innerHTML)
-}
-imgUpload.addEventListener("click", ()=>{
-  uploadBtn.click()
-})
 const output = (event)=>{
   const reader = new FileReader()
   reader.addEventListener("load", ()=>{
